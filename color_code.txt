@@ -1,0 +1,13 @@
+pink : #fee5c9
+
+white : #ffffff
+
+grayish white : #f4f4f0
+
+pinkish white : #fcffec
+
+
+black : #000000
+
+
+skyblue : #b0ade9
