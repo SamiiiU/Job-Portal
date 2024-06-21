@@ -57,9 +57,9 @@ header nav a{
     outline: none;
     text-decoration: none;
     padding: 0px 10px;
-    color: #222222;
+    color: #414141;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 header nav a:hover{
@@ -176,9 +176,9 @@ header button:hover{
 
 .logos{
     width: 100%;
-    padding: 2rem 3rem;
+    padding: 1rem 3rem;
     background-color: transparent;
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit , minmax(100px , 1fr));
@@ -278,7 +278,7 @@ header button:hover{
 
 .features-hero .text{
     text-align: center;
-    padding: 1rem 4rem;
+    padding: 1rem 15rem;
 }
 
 .features-hero .text h1{
@@ -300,8 +300,14 @@ header button:hover{
 .features-hero .box-container .box{
     width: 350px;
     height: 300px;
-    background-color: #7a7a7a;
+    background-color: #ffffff;
     border-radius: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .features-hero .btn{
@@ -345,7 +351,7 @@ header button:hover{
 }
 
 .test-hero button{
-    border: none;
+    border: 1px solid transparent;
     outline: none;
     color: #fcffec;
     background-color: #000000;
@@ -358,6 +364,12 @@ header button:hover{
     transition: 0.5s ease;
 }
 
+.test-hero button:hover{
+    border: 1px solid #000000;
+    background-color: transparent;
+    color: #000000;
+}
+
 .footer .other{   
     margin:   5rem 3rem 3rem 3rem;
     background-color: #bace4a;
@@ -366,13 +378,45 @@ header button:hover{
 }
 
 .footer .real{
-    
+    border-top: 1px solid #7a7a7a;
     margin:   5rem 3rem 3rem 3rem;
-    background-color: #bace4a;
-    border-radius: 20px;
+    /* background-color: #bace4a; */
+    /* border-radius: 20px; */
+    padding: 2rem 0rem; 
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
     
+    justify-items: center;
+    align-items: center;
 }
 
 .footer .real .social{
+    display: flex;
+    gap: 2rem;
+}
+
+.footer .real .social i{
+    font-size: 1.5rem;
+    color: #7a7a7a;
+}
+
+.footer .real .social i:hover{
+    color: #505050;
+}
+
+.footer .real .texts{
+    display: flex;
+    gap: 2rem;
+}
+
+.footer .real .texts a{
     
+    font-size: 1rem;
+    text-decoration: none;
+    color: #7a7a7a;
+}
+
+.footer .real  p{
+    font-weight: 700;
+    color: #7a7a7a;
 }
