@@ -66,6 +66,17 @@ header nav a:hover{
     color: #000000;
 }
 
+header .menu{
+    display: none;
+    justify-self: flex-end;
+    padding: 0.5rem 1rem;
+}
+
+header .menu i{
+    font-size: 2rem;
+    color: #414141;
+}
+
 header button{
     border: none;
     outline: none;
@@ -83,11 +94,41 @@ header button:hover{
     background-color: #000000;
 }
 
+.nav-menu{
+    
+    visibility: hidden;
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 4rem;
+    padding: 3rem 0rem;
+    text-align: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    transition: 0.5s ease-in-out;
+}
+
+.nav-menu a{
+    border: none;
+    outline: none;
+    text-decoration: none;
+    padding: 1rem;
+    color: #414141;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.nav-menu a:hover{
+    color: #000000;
+}
+
 .hero {
     /* background-color: aquamarine; */
     display: grid;
-    grid-template-columns: repeat(auto-fit ,minmax(400px,1fr));
-    
+    grid-template-columns: repeat(auto-fit ,minmax(450px,1fr));
     /* background-color: #214; */
 }
 
@@ -101,7 +142,6 @@ header button:hover{
 .hero .content h1{
     font-size: 4.5rem;
     font-weight: bold;
-    /* line-height: 4rem; */
 }
 
 .hero .content p{
@@ -200,7 +240,6 @@ header button:hover{
 /*About page starts here*/
 
 .about-hero{
-    height: 100vh;
     width: 100%;
 }
 
@@ -221,15 +260,12 @@ header button:hover{
 }
 
 .about-hero .box-container{
-    max-width: 100%;
-    /* background-color: aqua; */
+    max-width: 100%;  /* background-color: aqua; */
     padding: 1rem 3rem;
-    
     display: grid;
     grid-template-columns: repeat(auto-fit , minmax(370px,1fr));
     grid-template-rows: 1fr ;
     justify-items: center;
-
     gap: 2rem 2rem;
 }
 
@@ -278,7 +314,7 @@ header button:hover{
 
 .features-hero .text{
     text-align: center;
-    padding: 1rem 15rem;
+    padding: 1rem 3rem;
 }
 
 .features-hero .text h1{
@@ -420,3 +456,39 @@ header button:hover{
     font-weight: 700;
     color: #7a7a7a;
 }
+
+@media screen and (max-width : 900px){
+    .hero .content{
+        text-align: center;
+    }
+
+    .hero .btns-box{
+        justify-content: center;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header .menu{
+        display: block;
+    }
+
+    .nav-menu{
+        opacity: 0;
+        transform: scale(90%);
+        visibility: hidden;
+    }
+    
+
+    .visible{
+        visibility: visible;
+        opacity: 1;
+        transform: scale(100%);
+
+    }
+    
+}
+
+
+

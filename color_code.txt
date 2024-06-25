@@ -11,3 +11,34 @@ black : #000000
 
 
 skyblue : #b0ade9
+
+
+
+
+<div class="nav-menu visible">
+            <a href="index.html" style="font-weight: bold; color: #000000;">Home</a>
+            <a href="About.html">About Us</a>
+            <a href="features.html">Features</a>
+            <a href="testimonals.html">Testimonals</a>
+    </div>
+
+
+//css
+    .nav-menu .visible{
+        visibility: visible;
+    }
+
+
+
+////js
+
+    let icon = document.querySelector(".menu")
+
+let menus = document.querySelector(".nav-menu")
+
+
+
+icon.addEventListener("click" , function() {
+        menus.classList.toggle('visible');
+
+})
