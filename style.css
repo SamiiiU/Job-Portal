@@ -9,6 +9,13 @@
     font-family: 'Roboto' , sans-serif;
 }
 
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 header{
     width: 100%;
     padding: 1rem 3rem;
@@ -77,7 +84,7 @@ header .menu i{
     color: #414141;
 }
 
-header button{
+header button , .mob{
     border: none;
     outline: none;
     background-color: #b0ade9;
@@ -89,7 +96,7 @@ header button{
     transition: 0.5s ease;
 }
 
-header button:hover{
+header button:hover , .mob:hover{
     color: #b0ade9;
     background-color: #000000;
 }
@@ -130,6 +137,7 @@ header button:hover{
     display: grid;
     grid-template-columns: repeat(auto-fit ,minmax(450px,1fr));
     /* background-color: #214; */
+    animation: fade-up  1s  linear ;
 }
 
 .hero .content{
@@ -154,16 +162,18 @@ header button:hover{
 .hero .btns-box{
     /* background-color: rgb(21, 105, 105); */
     position: relative;
-    padding: 3rem 2rem 3rem 0rem;
+    padding: 3rem 3rem 3rem 0rem;
     height: fit-content;
     right: 0;
     display: flex;
     justify-content: flex-end;
 }
 .hero .btns-box .container {
+    
+    animation: fade-up  1s  linear  ;
     background-color: #b0ade9;
-    width: 350px;
-    height: 350px;
+    width: 60%;
+    height: 300px;
     border-radius: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr ;
@@ -200,8 +210,6 @@ header button:hover{
 }
 
 .hero .btns-box .container .img{
-    /* background-color: aqua; */
-    /* position: absolute; */
     display: inline-block;
     width: 300px;
     height: 400px;
@@ -209,7 +217,6 @@ header button:hover{
     background-size: 150%;
     background-position: top;
     transform: rotateY(180deg);
-    /* transform: translateX(20px); */
     margin-left: 100px ;
     
 }
@@ -221,7 +228,7 @@ header button:hover{
     /* position: absolute; */
     bottom: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit , minmax(100px , 1fr));
+    grid-template-columns: repeat(auto-fit , minmax(150px , 1fr));
     align-items: center;
     justify-items: center;
 }
@@ -240,10 +247,15 @@ header button:hover{
 /*About page starts here*/
 
 .about-hero{
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .about-hero .text{
+    
+    animation: fade-up  1s  linear ;
     width: 100%;
     padding: 1rem 3rem;
     text-align: center;
@@ -260,8 +272,8 @@ header button:hover{
 }
 
 .about-hero .box-container{
-    max-width: 100%;  /* background-color: aqua; */
-    padding: 1rem 3rem;
+    max-width: fit-content; 
+    padding: 1rem 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit , minmax(370px,1fr));
     grid-template-rows: 1fr ;
@@ -270,6 +282,7 @@ header button:hover{
 }
 
 .about-hero .box-container .box{
+    animation: fade-up  1s  linear ;
     background-color: #fee5c9;
     width: 400px;
     border-radius: 20px;
@@ -296,7 +309,7 @@ header button:hover{
 .about-hero .box-container .box .inside{
     width: 100%;
     background-color: #ffffff  ;
-    height: 300px;
+    height: 250px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -313,6 +326,7 @@ header button:hover{
 }
 
 .features-hero .text{
+    animation: fade-up 0.5s linear;
     text-align: center;
     padding: 1rem 3rem;
 }
@@ -322,19 +336,20 @@ header button:hover{
 }
 
 .features-hero .box-container{
+    animation: fade-up 0.5s linear;
+    animation-delay: 100ms;
     margin: 2rem 0rem;
     /* background-color: #afaf31; */
     width: 100%;
-    
     padding: 2rem;
     display: grid;
     gap: 3rem;
-    grid-template-columns: repeat(auto-fit , minmax(350px , 1fr));
+    grid-template-columns: repeat(auto-fit , minmax(300px , 1fr));
     justify-items: center;
 }
 
 .features-hero .box-container .box{
-    width: 350px;
+    width: 90%;
     height: 300px;
     background-color: #ffffff;
     border-radius: 20px;
@@ -365,6 +380,7 @@ header button:hover{
 
 .test-hero{
     
+    animation: fade-up 0.5s linear;
     margin: 1rem 3rem;
     background-color: #fcffec;
     border-radius: 20px;
@@ -397,6 +413,7 @@ header button:hover{
     font-weight: 600;
     margin: 3rem 0rem 0rem 0rem;
     cursor: pointer;
+    box-shadow: 0px 2px 14px rgba(0,0,0,0.7);
     transition: 0.5s ease;
 }
 
@@ -416,12 +433,9 @@ header button:hover{
 .footer .real{
     border-top: 1px solid #7a7a7a;
     margin:   5rem 3rem 3rem 3rem;
-    /* background-color: #bace4a; */
-    /* border-radius: 20px; */
     padding: 2rem 0rem; 
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    
     justify-items: center;
     align-items: center;
 }
@@ -457,13 +471,38 @@ header button:hover{
     color: #7a7a7a;
 }
 
+.mob{
+    display: none;
+}
+
+
+@keyframes fade-up{
+    0%{
+        opacity: 0;
+        transform: translateY(20%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    
+}
+
+
 @media screen and (max-width : 900px){
+
+    .mob{
+        display: none;
+    }
     .hero .content{
         text-align: center;
     }
 
     .hero .btns-box{
         justify-content: center;
+        padding: 2rem 0rem;
     }
 
     header nav {
@@ -473,6 +512,7 @@ header button:hover{
     header .menu{
         display: block;
     }
+
 
     .nav-menu{
         opacity: 0;
@@ -487,8 +527,117 @@ header button:hover{
         transform: scale(100%);
 
     }
+
+    .footer .real{
+        margin-bottom: 1rem;
+        gap : 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(450px , 1fr));
+    }
+
     
 }
 
+
+@media screen and (max-width : 600px){
+    header{
+        padding: 1rem;
+    }
+    header .logo{
+        align-self: center;
+        font-size: 1rem;
+    }
+
+    header .menu i{
+        font-size: 1.5rem;
+    }
+
+    header button{
+        display: none;
+    }
+
+    .mob{
+        display: block;
+    }
+
+    header .menu{
+        grid-column: 3;
+    }
+
+    .hero .btns-box{
+        padding: 3rem 0rem;
+    }
+
+    .hero .btns-box .container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .features-hero .text h1 , .about-hero .text h1 , .hero .content h1{
+        font-size: 2rem;
+    }
+
+
+
+    .features-hero {
+        margin: 1rem 2rem;
+        width: fit-content;
+    }
+
+    .about-hero .box-container{
+        padding: 1rem 0rem;
+    }
+
+    .about-hero .box-container .box{
+        width: 280px;
+    }
+
+    .about-hero .box-container .box h2{
+        font-size: 2rem;
+    }
+
+    .about-hero .box-container .box p , .features-hero .btn , .hero .content p{
+        font-size: 1rem;
+    }
+
+    .footer{
+        max-width: fit-content;
+    }
+    .footer .real {
+        width: fit-content;
+        margin:   3rem 0rem 3rem 0rem;
+        padding: 1rem 0rem;
+    }
+    .footer .real .texts a{
+        font-size: 0.8rem;
+        
+    }
+
+    .footer .real .texts {
+        gap: 0.5rem;
+    }
+
+    .hero .btns-box .container button{
+
+        font-size: 1rem;
+        padding: 1% 0.5%;
+    }
+    
+    
+.hero .btns-box .container .img{
+    
+    width: 200px;
+    height: 300px;
+    background-image: url(man.png);
+    background-size: 150%;
+    background-position: top;
+    transform: rotateY(180deg);
+    margin-left: 100px ;
+    
+}
+    .nav-menu a{
+        font-size: 1.2rem;
+    }
+}
 
 
