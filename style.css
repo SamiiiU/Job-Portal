@@ -228,9 +228,10 @@ header button:hover , .mob:hover{
     /* position: absolute; */
     bottom: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit , minmax(150px , 1fr));
+    grid-template-columns: repeat(auto-fit , minmax(100px , 1fr));
     align-items: center;
     justify-items: center;
+    gap: 1rem   ;
 }
 
 .logos i{
@@ -251,6 +252,7 @@ header button:hover , .mob:hover{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    
 }
 
 .about-hero .text{
@@ -272,7 +274,7 @@ header button:hover , .mob:hover{
 }
 
 .about-hero .box-container{
-    max-width: fit-content; 
+    width: 100%;;
     padding: 1rem 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit , minmax(370px,1fr));
@@ -314,6 +316,20 @@ header button:hover , .mob:hover{
     border-top-right-radius: 20px;
 }
 
+.about-hero .box-container .box .inside {
+    background-image: url(1.jpg);
+    background-size: 120%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.about-hero .box-container .box:nth-child(2) .inside{
+    background-image: url(2.png);
+}
+
+.about-hero .box-container .box:nth-child(3) .inside{
+    background-image: url(3.png);
+}
 /*Features starts here */
 
 .features-hero {
@@ -573,7 +589,7 @@ header button:hover , .mob:hover{
         height: 250px;
     }
 
-    .features-hero .text h1 , .about-hero .text h1 , .hero .content h1{
+    .features-hero .text h1 , .about-hero .text h1 , .hero .content h1 ,.test-hero h1 , .logos i{
         font-size: 2rem;
     }
 
@@ -596,7 +612,7 @@ header button:hover , .mob:hover{
         font-size: 2rem;
     }
 
-    .about-hero .box-container .box p , .features-hero .btn , .hero .content p{
+    .about-hero .box-container .box p , .features-hero .btn , .hero .content p , .test-hero p {
         font-size: 1rem;
     }
 
@@ -617,7 +633,7 @@ header button:hover , .mob:hover{
         gap: 0.5rem;
     }
 
-    .hero .btns-box .container button{
+    .hero .btns-box .container button {
 
         font-size: 1rem;
         padding: 1% 0.5%;
